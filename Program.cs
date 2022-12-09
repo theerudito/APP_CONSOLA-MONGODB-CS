@@ -59,7 +59,6 @@ namespace MongoDB_APP
       //=============== DELETE DOCUMENT IN COLLECTION ==============================================================
       collectionMongoDB.DeleteOne(character => character.Id == "63935779f307668fdf7be383");
       //=============== DELETE DOCUMENT IN COLLECTION ==============================================================
-
     }
   }
 }
