@@ -6,14 +6,15 @@ namespace MongoDB_APP
   {
     static void Main(string[] args)
     {
-      System.Console.WriteLine("'Hello World!'");
-
-      // el cliente de mongo
+      // THE CLIENT OF MONGO
       var clientMongoDB = new MongoClient("mongodb://localhost:27017");
-      // la db de mongo
+
+      // THE DATABASE OF MONGO
       var dbMongoDB = clientMongoDB.GetDatabase("Naruto");
-      // la coleccion de mongo
+      
+      // THE COLLECTION OF MONGO
       var collectionMongoDB = dbMongoDB.GetCollection<Models.Naruto>("characters");
+
 
 
       //=============== ADD DOCUMENT IN COLLECTION =================================================================
@@ -23,9 +24,9 @@ namespace MongoDB_APP
         Clan = "Uzumaki",
         Age = "12"
       };
-
       collectionMongoDB.InsertOne(naruto);
       //=============== ADD DOCUMENT IN COLLECTION =================================================================
+
 
 
       //=============== GET ALL DOCUMENTS IN COLLECTION =============================================================
